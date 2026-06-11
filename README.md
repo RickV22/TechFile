@@ -22,4 +22,3 @@
 * **HTML5 / JSX**
 
 
-# TechFile
