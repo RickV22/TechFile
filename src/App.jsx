@@ -164,7 +164,7 @@ function App() {
   // ESTADOS DE LA UI 
   const [navOpen, setNavOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('inicio');
-  
+
   // Búsqueda y Filtros
   const [searchTerm, setSearchTerm] = useState('');
   const [currentCat, setCurrentCat] = useState('todos');
@@ -202,7 +202,7 @@ function App() {
 
   // MANEJADORES DE EVENTOS
   const toggleNav = () => setNavOpen(!navOpen);
-  
+
   const showToast = (msg) => {
     setToast({ show: true, msg });
     setTimeout(() => setToast(prev => ({ ...prev, show: false })), 3000);
@@ -255,14 +255,14 @@ function App() {
                 <div className="file-name">{isoFile.name}</div>
                 <div className="file-size">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
                   </svg>
                   {isoFile.size}
                 </div>
               </div>
               <a className="btn-dl-modal" href={isoFile.url} target="_blank" rel="noreferrer" onClick={() => showToast(`Descarga iniciada: ${isoFile.name}`)}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
               </a>
             </div>
@@ -330,14 +330,14 @@ function App() {
                 <div className="file-name">{driverPack.name}</div>
                 <div className="file-size">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
                   </svg>
                   {driverPack.size}
                 </div>
               </div>
               <a className="btn-dl-modal" href={driverPack.url} target="_blank" rel="noreferrer" onClick={() => showToast(`Descarga iniciada: ${driverPack.name}`)}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
               </a>
             </div>
@@ -400,7 +400,7 @@ function App() {
           {file.size && (
             <div className="file-size">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
               </svg>
               {file.size}
             </div>
@@ -408,7 +408,7 @@ function App() {
         </div>
         <a className="btn-dl-modal" href={file.url} target="_blank" rel="noreferrer" onClick={() => showToast(`Descarga iniciada: ${file.name}`)}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
           </svg>
         </a>
       </div>
@@ -443,7 +443,7 @@ function App() {
             <circle cx="8" cy="8" r="3" fill="currentColor" />
             <circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.2" opacity=".4" />
           </svg>
-          Portal Activo · v1.1
+          Portal Activo · v1.2
         </div>
 
         <h1>Tech<span className="accent">File</span></h1>
@@ -473,12 +473,12 @@ function App() {
           <svg className="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
-          <input 
-            className="search-input" 
-            type="text" 
-            placeholder="Buscar archivos..." 
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Buscar archivos..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)} 
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
       </div>
@@ -528,9 +528,9 @@ function App() {
 
         <div className="filter-tabs">
           {['todos', 'sistema', 'drivers', 'software', 'herramientas'].map(cat => (
-            <button 
+            <button
               key={cat}
-              className={`tab ${currentCat === cat ? 'active' : ''}`} 
+              className={`tab ${currentCat === cat ? 'active' : ''}`}
               onClick={() => setCurrentCat(cat)}
             >
               {cat.charAt(0).toUpperCase() + cat.slice(1)}
