@@ -3,10 +3,10 @@ import "./App.css";
 
 const filesData = {
   'windows-iso': [
-    { name: 'Windows 11 varias ediciones', size: '7.6 GB', url: 'https://software.download.prss.microsoft.com/dbazure/Win11_25H2_Spanish_Mexico_x64_v2.iso?t=013b56c1-244d-43c2-80f4-f25716aa04b9&P1=1779654823&P2=602&P3=2&P4=duxUxw1B3hz3Xq7eM%2bBqsn0xGFcxjdL6AdbtU8jcl0F1JUceTAosQPFYg5dkcBzRo67ou83I0XGmQSnMMzq6Hm6Rnlf%2f6iqrxirYA6%2bwCV0VmMJQOyrILk%2b04ROOtjj25TUKEKlbYFMRqz078PxX%2fZHrJCfcSP0IKvzCIhnNmZWQCIjfQ7LCY4qiqSBoco6DCTTkEpSgmSunpNIt3D6MUnLiPviuZZYdqWPXqX9fWDvoXKaR4TTbfUVNiDQOoOUiv6ui5djhs69I22oLaiNlezk3pIlqc6dnLva8S4hjD%2flj9mQxerit6C3EZ7MkotWJYCR7WCaCgwB4LpgGcibwZw%3d%3d' },
-    { name: 'Windows 11 enterprise_ltsc_2024_x64', size: '4.8 GB', url: 'https://fafda.to/d/t3wgmn5p49ir?v=c_ckuYnQhDxfSd5KnYNtid8u_HB3Od5ERwj7sJQkkW_Y4J2ZbBYuzKeFFsP8y6Gm19zigQy_EHgr_E7RoMVDZUXLKXqh3OJK0O0Kgydj5qWpUb_lwoveptAEwvFRR7PNnNeiA7Kxx1-vUXLnRumgC20Oema56SdMsSYXN_2NlUoRQirv4tenJLQgGYJmrJWlVUs1fHrLtdPbt_qTBBJpidhYDGLdOyp44PSmdg1lr3XX1oM85ujB-uitiRY820AwrFYUKhsQpQ' },
+    { name: 'Windows 11 varias ediciones', size: '7.6 GB', url: 'https://download2392.mediafire.com/vogalvhq8nkgHhBfgse-3VzQ2Y7L724orDjcf-Pk_6sYmm-9rpmB5_egWvM_52fQLF8dJgmhZtEWmoZK0_GFPx_oHG8d5S_RkW5yNLklTG_yfQNNfoRg1sgG1H3sKZ2x5jQla0r9sSasdPo4HbHld6DTEix54VtwdcvUBvnb2DYfaQ/74vacr2cq1fmnue/Win11_25H2_Spanish_x64.iso' },
+    { name: 'Windows 11 enterprise_ltsc varias versiones', size: '4.8 GB', url: 'https://massgrave.dev/windows_ltsc_links' },
     { name: 'TomexOS11', size: '2.4 GB', url: 'https://download2391.mediafire.com/3ub0owh623cgQytemVvzsVnS8eWnh_oTTYFfcooRhoTMlfbNAOAleRKPzTjHXW2h8XsY9uFg-5PXxmot5tF8K6EsJAz0lndcv4oicZKfNwFcAiWnYAbxAY9KeVx2jAk-78OYFgjXbarJgJBZFZ3W3Za8ym3I6nB7VgwJfDtAnoBoeQ/it4vvtdlxexi7xz/TomexOS+11+24H2+V1.0.iso' },
-    { name: 'Windows 10 varias ediciones', size: '5.4 GB', url: 'https://software.download.prss.microsoft.com/dbazure/Win10_22H2_Spanish_Mexico_x64v1.iso?t=6f9059e4-0c19-459b-ae57-dbb9d6bec5ef&P1=1779651501&P2=602&P3=2&P4=Iwf%2fu5iv8a6J9hKtMATMHrXZmdO0FX9LqFj6xRwRPm4AD0YNZUfRlY0hO5QvUdmRxhqviTA6MxkqXByV8BifcxSimwa%2f4jcDNuwNzVqJb0rFOjuVFIsk4wEzQepjuF9NsPJcsMUV5HWJNYsJlgRG7pDTlarIgsf9S9lhCmG0vdtPalrUu%2ftKsQ0LnRAtQ8sRm7NjIK8DNsegthqCWmL%2bwW6bQAA3ZBWj7VaDJkPFe4GOWEm8S53xdzRWBZVG0KtC11SLdIXQViO2R%2bNJtA6PI1TgWZW3GpM8An6bm0daYTxVoHh6qGXxNCnVPWrael2FuQnkuyCdI%2fT6pc7lZoG0HQ%3d%3d' },
+    { name: 'Windows 10 varias ediciones', size: '5.7 GB', url: 'https://drive.google.com/file/d/1mxbe2o4m71x8Ex6HAjQ3A99yVlYABDcA/view?usp=sharing' },
     { name: 'Windows 11 Winter OS Rev.12', size: '4.8 GB', url: 'https://archive.org/download/rev-12v-23-h-2-w-11/Rev12v23H2W11.iso' },
     { name: 'Windows Server 2025 ISO', size: '7.6 GB', url: 'https://go.microsoft.com/fwlink/?linkid=2345734&clcid=0x409&culture=en-us&country=us' }
   ],
@@ -37,7 +37,7 @@ const filesData = {
     { name: 'CPU-Z ', size: '3.5 MB', url: 'https://download.cpuid.com/cpu-z/cpu-z_2.20-en.exe' },
     { name: 'GPU-Z v2.69.0', size: '11.3 MB', url: 'https://download1649.mediafire.com/8o0b7x3e1ddgZDbbNwPGj_-PQqo5zO2HDezAxGIbRsFvRXMN7zrR8fubO0vzJB2si4mBvansOC-Vx0gLw41PExA88z7OjYUoQeGIu8Pw0eIGSlUCSjsVCwIPDRuqTBiL4GebYb39tATa6rSM8pBTHeorAdon9SLp3fR6-c42cr_45A/uiu0z7gfoo9irj5/GPU-Z.2.69.0.exe' },
     { name: 'HWMonitor Pro v1.50', size: '2.9 MB', url: 'https://download.cpuid.com/hwmonitor/hwmonitor_1.63.exe' },
-    { name: 'CrystalDiskInfo v9.5', size: '5.9 MB', url: 'https://download938.mediafire.com/phx62sci92qg6YP2GleIlFoNlezQnK-BlZuEMY6qio1ljg6cSSo79mReAmXjZhMU0qqsis0V0xEVsCylQo-zO7N9iMu6ozHjAqV1eIPaJI7Taboo2-d7Dnkiik9HB0VBQU3Lf6hQcH77ERYHECaNznmikati3S_j6YqWx0-P3Yma5Q/zm90exu7kfpld4g/CrystalDiskInfo9_9_1.exe' },
+    { name: 'CrystalDiskInfo v9.5', size: '5.9 MB', url: 'https://download938.mediafire.com/p12e088alzagRF-LDoWpOUCOzl6MjYvPkv2P1F_Q2kL86U7CG9DlpeTyEqfiq-z4-88AbRHmcjnmselJQkUbKAfHVuniTZctxfnTZG5BD1l56Sfn7AbaBtmlqynIrWGzryEm0ErZvHOCncQZXnqnOTlVQcF8KdK0r7VwHj43L7TSXg/zm90exu7kfpld4g/CrystalDiskInfo9_9_1.exe' },
     { name: 'CrystalDiskMark v9.0.3', size: '4.31 MB', url: 'https://download1472.mediafire.com/5a0go1x83jtgv9SHJpiiDQRa917e1Gwtu17oZ5V6Ejihjv6-d-cs6o2QC2PX29wS_7Id37bx4Lw8_aD_A9ljNgOD7tnaaAc-lC18nM1VuARc5udNecuLEsFFgXoNa2g24_dV84UyOoJ3Qd8CINyGlMcu__qX4y_UGJbDTqpvzc0hSw/2lu5mrqrwd6b75d/CrystalDiskMark9_0_3.exe' }
   ],
   'cleanmaster': [
@@ -54,6 +54,7 @@ const filesData = {
   ],
   'ubuntu-iso': [
     { name: 'Ubuntu 26.04 desktop-amd64.iso', size: '6.1 GB', url: 'https://releases.ubuntu.com/26.04/ubuntu-26.04-desktop-amd64.iso?_gl=1*efop6s*_gcl_au*Njk2ODkwNTg0LjE3Nzk1Njg3MTA.' },
+    { type: 'flathub', name: 'Flathub', description: 'Aquí encontrarás todos los programas y apps para Linux', url: 'https://flathub.org/en?category=popular' },
     { type: 'distribution', name: 'Fedora', url: 'https://getfedora.org/es/workstation/download/' },
     { type: 'distribution', name: 'Debian', url: 'https://www.debian.org/distrib/index.es.html' },
     { type: 'distribution', name: 'Linux Mint', url: 'https://www.linuxmint.com/download.php' },
@@ -244,7 +245,8 @@ function App() {
     }
 
     if (fileId === 'ubuntu-iso') {
-      const isoFile = files.find(f => !f.type || f.type !== 'distribution');
+      const isoFile = files.find(f => f.name && f.name.toLowerCase().includes('ubuntu'));
+      const flathubItem = files.find(f => f.type === 'flathub' || (f.name && f.name.toLowerCase().includes('flathub')));
       const distributions = files.filter(f => f.type === 'distribution');
 
       return (
@@ -267,9 +269,45 @@ function App() {
               </a>
             </div>
           )}
+          {flathubItem && (
+            <div className="file-item" style={{ marginTop: "8px" }}>
+              <div className="file-info">
+                <div className="file-name" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                  <span>{flathubItem.name}</span>
+                  <span style={{ fontSize: "0.75rem", padding: "2px 8px", borderRadius: "4px", background: "var(--accent-glow)", color: "var(--accent)", border: "1px solid var(--accent)44", fontWeight: 600 }}>
+                    Sitio Web
+                  </span>
+                </div>
+                <div className="file-size" style={{ marginTop: "4px", color: "var(--text-sub)" }}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ minWidth: "12px", width: "12px", height: "12px" }}>
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
+                  {flathubItem.description}
+                </div>
+              </div>
+              <a
+                className="btn-dl-modal"
+                href={flathubItem.url}
+                target="_blank"
+                rel="noreferrer"
+                title="Visitar sitio web de Flathub"
+                style={{ gap: "6px", width: "auto", padding: "0 14px", fontSize: "0.85rem", fontWeight: 600 }}
+                onClick={() => showToast('Abriendo página de Flathub...')}
+              >
+                <span>Ir a Flathub</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ width: "14px", height: "14px" }}>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+          )}
           {distributions.length > 0 && (
             <>
-              <div style={{ padding: "20px 16px", textAlign: "center", borderTop: "1px solid var(--border)" }}>
+              <div style={{ padding: "20px 16px 12px", textAlign: "center", borderTop: "1px solid var(--border)", marginTop: "12px" }}>
                 <p style={{ color: "var(--text-sub)", fontSize: "0.9rem", marginBottom: "16px", lineHeight: 1.5 }}>
                   Como hay demaciadas distribuciones disponibles, aquí te dejo los enlaces para que elijas la que más te guste.
                 </p>
