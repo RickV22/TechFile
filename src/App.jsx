@@ -5,7 +5,7 @@ const filesData = {
   'windows-iso': [
     { name: 'Windows 11 varias ediciones', size: '7.6 GB', url: 'https://download2392.mediafire.com/vogalvhq8nkgHhBfgse-3VzQ2Y7L724orDjcf-Pk_6sYmm-9rpmB5_egWvM_52fQLF8dJgmhZtEWmoZK0_GFPx_oHG8d5S_RkW5yNLklTG_yfQNNfoRg1sgG1H3sKZ2x5jQla0r9sSasdPo4HbHld6DTEix54VtwdcvUBvnb2DYfaQ/74vacr2cq1fmnue/Win11_25H2_Spanish_x64.iso' },
     { name: 'Windows 11 enterprise_ltsc varias versiones', size: '4.8 GB', url: 'https://massgrave.dev/windows_ltsc_links' },
-    { name: 'TomexOS11', size: '2.4 GB', url: 'https://download2391.mediafire.com/3ub0owh623cgQytemVvzsVnS8eWnh_oTTYFfcooRhoTMlfbNAOAleRKPzTjHXW2h8XsY9uFg-5PXxmot5tF8K6EsJAz0lndcv4oicZKfNwFcAiWnYAbxAY9KeVx2jAk-78OYFgjXbarJgJBZFZ3W3Za8ym3I6nB7VgwJfDtAnoBoeQ/it4vvtdlxexi7xz/TomexOS+11+24H2+V1.0.iso' },
+    { name: 'TomexOS 11', size: '2.4 GB', url: 'https://download2391.mediafire.com/3ub0owh623cgQytemVvzsVnS8eWnh_oTTYFfcooRhoTMlfbNAOAleRKPzTjHXW2h8XsY9uFg-5PXxmot5tF8K6EsJAz0lndcv4oicZKfNwFcAiWnYAbxAY9KeVx2jAk-78OYFgjXbarJgJBZFZ3W3Za8ym3I6nB7VgwJfDtAnoBoeQ/it4vvtdlxexi7xz/TomexOS+11+24H2+V1.0.iso' },
     { name: 'Windows 10 varias ediciones', size: '5.7 GB', url: 'https://drive.google.com/file/d/1mxbe2o4m71x8Ex6HAjQ3A99yVlYABDcA/view?usp=sharing' },
     { name: 'Windows 11 Winter OS Rev.12', size: '4.8 GB', url: 'https://archive.org/download/rev-12v-23-h-2-w-11/Rev12v23H2W11.iso' },
     { name: 'Windows Server 2025 ISO', size: '7.6 GB', url: 'https://go.microsoft.com/fwlink/?linkid=2345734&clcid=0x409&culture=en-us&country=us' }
