@@ -173,7 +173,7 @@ const cardsData = [
     searchKeywords: 'optimizar windows winutil christitus fps boost speed bloatware',
     description: 'Herramienta de Chris Titus Tech para optimizar Windows, eliminar bloatware y mejorar el rendimiento.',
     meta: [
-      { text: 'Win 10/11', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>' },
+      { text: 'Win 11', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>' },
       { text: 'Script', icon: '' }
     ]
   }
