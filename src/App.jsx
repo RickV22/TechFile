@@ -166,7 +166,7 @@ const cardsData = [
   },
   {
     id: 'Optimizaciones',
-    name: 'Winutil',
+    name: 'Optimizaciones',
     icon: '🚀',
     category: 'software',
     categoryLabel: 'Software',
@@ -260,6 +260,137 @@ function App() {
 
     if (files.length === 0) {
       return <p style={{ color: "var(--text-sub)", textAlign: "center", padding: "40px 20px" }}>No hay archivos disponibles</p>;
+    }
+
+    if (fileId === 'Optimizaciones') {
+      const guia = files.find(f => f.name && f.name.toLowerCase().includes('guía')) || { url: 'https://winutil.christitus.com/guides/' };
+      const comandoText = "irm christitus.com/win | iex";
+
+      return (
+        <div className="optimizations-modal" style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+          {/* Tarjeta de Guía */}
+          <div style={{
+            background: "var(--bg-card2)",
+            border: "1px solid var(--border)",
+            borderRadius: "var(--radius-sm)",
+            padding: "16px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: "16px"
+          }}>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontWeight: 600, fontSize: "1rem", color: "var(--text)", marginBottom: "4px" }}>
+                Guía de Optimización Oficial
+              </div>
+              <div style={{ fontSize: "0.85rem", color: "var(--text-sub)", lineHeight: "1.4" }}>
+                Consulta la documentación y guías oficiales de Chris Titus para optimizar tu sistema de forma segura.
+              </div>
+            </div>
+            <a
+              href={guia.url}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-dl-modal"
+              style={{
+                width: "auto",
+                whiteSpace: "nowrap",
+                padding: "10px 16px",
+                fontSize: "0.85rem",
+                fontWeight: 600,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                background: "var(--accent)",
+                color: "#000",
+                borderRadius: "var(--radius-sm)",
+                textDecoration: "none"
+              }}
+              onClick={() => showToast('Abriendo Guía de Optimización...')}
+            >
+              <span>Ver Guía</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ width: "14px", height: "14px" }}>
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          </div>
+
+          {/* Tarjeta de Comando */}
+          <div style={{
+            background: "var(--bg-card2)",
+            border: "1px solid var(--border)",
+            borderRadius: "var(--radius-sm)",
+            padding: "20px 16px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "12px"
+          }}>
+            <div>
+              <div style={{ fontWeight: 600, fontSize: "1rem", color: "var(--text)", marginBottom: "4px" }}>
+                Ejecutar Chris Titus Tool (Winutil)
+              </div>
+              <div style={{ fontSize: "0.85rem", color: "var(--text-sub)", lineHeight: "1.4" }}>
+                Abre <strong>PowerShell</strong> como <strong>Administrador</strong> y ejecuta el siguiente comando para iniciar la herramienta interactiva de optimización:
+              </div>
+            </div>
+
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              background: "#0d1117",
+              border: "1px solid var(--border)",
+              borderRadius: "6px",
+              padding: "10px 14px",
+              justifyContent: "space-between",
+              gap: "10px",
+              fontFamily: "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace"
+            }}>
+              <code style={{
+                color: "#ff79c6",
+                fontSize: "0.85rem",
+                wordBreak: "break-all",
+                userSelect: "all"
+              }}>
+                <span style={{ color: "#8be9fd" }}>irm</span> christitus.com/win | <span style={{ color: "#8be9fd" }}>iex</span>
+              </code>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(comandoText);
+                  showToast('¡Comando copiado al portapapeles!');
+                }}
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  cursor: "pointer",
+                  color: "var(--text-sub)",
+                  padding: "4px 8px",
+                  borderRadius: "4px",
+                  transition: "color 0.2s, background-color 0.2s",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.color = "var(--text)";
+                  e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.05)";
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.color = "var(--text-sub)";
+                  e.currentTarget.style.backgroundColor = "transparent";
+                }}
+                title="Copiar comando"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: "16px", height: "16px" }}>
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      );
     }
 
     if (fileId === 'ubuntu-iso') {
