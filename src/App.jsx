@@ -15,7 +15,8 @@ const filesData = {
     { name: 'RDriveImage7.exe', size: '128 MB', url: 'https://www.drive-image.com/downloads/RDriveImage7.exe' },
     { name: 'Rufus', size: '820 MB', url: 'https://github.com/pbatard/rufus/releases/download/v4.14/rufus-4.14.exe' },
     { name: 'Ventoy', size: '15.94 MB', url: 'https://download1474.mediafire.com/lht0u0jrxr5gHl3dXkuqX_X3Z5Zf4UFHVxVhdGSQmPbAfbtNNf7m8atpDxJUgAQMNEPoKHnpu43-4jgy4FVbOvfZt6izH1ajDvY-123Gf4vDzYn3a7Lkifag37FltLUz8NBqreZrnfwKwrRom2qtTq2gowUiCJ_U5EcrOOB85l-NLQ/a6nrsgd0mzfvvyx/ventoy-1.1.12-windows.zip' },
-    { name: 'Activador de windows y office', size: '316 B', url: 'https://download1528.mediafire.com/8uvawua5wufgsx-5iWCCtHXa1U-NWVDpmuBolAPqjYLJdJupy1SZY2ftEAvo4cIxwhP3zRePuCPGLl689mDfAG4lzsaPzoJngTfhnKfxNEfeJPeDJqbeQLPXtfO8bnzzspQwEPmtRLNu_ghWD8a7sz3GNcn-sIdP2Ca57-QWCxiTng/g7jh9m2ndz91krh/Activaci%C3%B3n-instalacion_win_office.txt' }
+    { name: 'Activador de windows y office', size: '316 B', url: 'https://download1528.mediafire.com/8uvawua5wufgsx-5iWCCtHXa1U-NWVDpmuBolAPqjYLJdJupy1SZY2ftEAvo4cIxwhP3zRePuCPGLl689mDfAG4lzsaPzoJngTfhnKfxNEfeJPeDJqbeQLPXtfO8bnzzspQwEPmtRLNu_ghWD8a7sz3GNcn-sIdP2Ca57-QWCxiTng/g7jh9m2ndz91krh/Activaci%C3%B3n-instalacion_win_office.txt' },
+    { name: 'Microsoft Activation Scripts (MAS)', description: 'Versiones de Windows, activaciones y Office.', type: 'link', url: 'https://massgrave.dev/' }
   ],
   'drivers-pack': [
     { name: 'Drivers Pack 2024 Q4', size: '9.2 MB', url: 'https://cdn.pchelpsoft.com/SimpleLink/Driver_Updater_setup.exe?_gl=1*1jviryk*_up*MQ..*_ga*MTE4NzM1NTYwNi4xNzc5NTcxMDI5*_ga_T9M0PYG550*czE3Nzk1NzEwMjgkbzEkZzAkdDE3Nzk1NzEwMjgkajYwJGwwJGgyODU2MTA0NDY.' },
@@ -584,12 +585,17 @@ function App() {
     }
 
     return files.map((file, idx) => {
-      const isWindows7Link = file.name === 'Windows 7';
+      const isExternalLink = file.type === 'link' || file.name === 'Windows 7';
 
       return (
         <div className="file-item" key={idx}>
           <div className="file-info">
             <div className="file-name">{file.name}</div>
+            {file.description && (
+              <div style={{ color: "var(--text-sub)", fontSize: "0.82rem", marginTop: "4px" }}>
+                {file.description}
+              </div>
+            )}
             {file.size && (
               <div className="file-size">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -600,13 +606,13 @@ function App() {
             )}
           </div>
           <a
-            className={isWindows7Link ? 'btn-link-modal' : 'btn-dl-modal'}
+            className={isExternalLink ? 'btn-link-modal' : 'btn-dl-modal'}
             href={file.url}
             target="_blank"
             rel="noreferrer"
-            onClick={() => showToast(isWindows7Link ? `Abriendo enlace: ${file.name}` : `Descarga iniciada: ${file.name}`)}
+            onClick={() => showToast(isExternalLink ? `Abriendo enlace: ${file.name}` : `Descarga iniciada: ${file.name}`)}
           >
-            {isWindows7Link ? (
+            {isExternalLink ? (
               <>
                 <span>Abrir</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
