@@ -613,6 +613,27 @@ footer {
 }
 .btn-dl-modal svg { width: 16px; height: 16px; }
 
+.btn-link-modal {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 10px 14px;
+  min-width: 110px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  text-decoration: none; cursor: pointer;
+  flex-shrink: 0;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.02em;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.btn-link-modal:hover {
+  background: var(--accent-glow);
+  border-color: var(--accent)55;
+  box-shadow: 0 0 18px var(--accent-glow);
+  transform: translateY(-1px);
+}
+.btn-link-modal svg { width: 14px; height: 14px; }
+
 /* RESPONSIVE MODAL */
 @media (max-width: 700px) {
   .modal-content {

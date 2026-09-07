@@ -7,6 +7,7 @@ const filesData = {
     { name: 'Windows 11 enterprise_ltsc varias versiones', size: '4.8 GB', url: 'https://massgrave.dev/windows_ltsc_links' },
     { name: 'TomexOS 11', size: '2.4 GB', url: 'https://download2391.mediafire.com/3ub0owh623cgQytemVvzsVnS8eWnh_oTTYFfcooRhoTMlfbNAOAleRKPzTjHXW2h8XsY9uFg-5PXxmot5tF8K6EsJAz0lndcv4oicZKfNwFcAiWnYAbxAY9KeVx2jAk-78OYFgjXbarJgJBZFZ3W3Za8ym3I6nB7VgwJfDtAnoBoeQ/it4vvtdlxexi7xz/TomexOS+11+24H2+V1.0.iso' },
     { name: 'Windows 10 varias ediciones', size: '5.7 GB', url: 'https://drive.google.com/file/d/1mxbe2o4m71x8Ex6HAjQ3A99yVlYABDcA/view?usp=sharing' },
+    { name: 'Windows 7', size: 'Página de descarga', url: 'https://massgrave.dev/windows_7_links' },
     { name: 'Windows 11 Winter OS Rev.12', size: '4.8 GB', url: 'https://archive.org/download/rev-12v-23-h-2-w-11/Rev12v23H2W11.iso' },
     { name: 'Windows Server 2025 ISO', size: '7.6 GB', url: 'https://go.microsoft.com/fwlink/?linkid=2345734&clcid=0x409&culture=en-us&country=us' }
   ],
@@ -411,9 +412,10 @@ function App() {
                   {isoFile.size}
                 </div>
               </div>
-              <a className="btn-dl-modal" href={isoFile.url} target="_blank" rel="noreferrer" onClick={() => showToast(`Descarga iniciada: ${isoFile.name}`)}>
+              <a className="btn-dl-modal" href={isoFile.url} target="_blank" rel="noreferrer" onClick={() => showToast(`Abriendo enlace: ${isoFile.name}`)}>
+                <span>Abrir</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
+                  <path d="M7 17 17 7" /><path d="M7 7h10v10" />
                 </svg>
               </a>
             </div>
@@ -522,9 +524,10 @@ function App() {
                   {driverPack.size}
                 </div>
               </div>
-              <a className="btn-dl-modal" href={driverPack.url} target="_blank" rel="noreferrer" onClick={() => showToast(`Descarga iniciada: ${driverPack.name}`)}>
+              <a className="btn-dl-modal" href={driverPack.url} target="_blank" rel="noreferrer" onClick={() => showToast(`Abriendo enlace: ${driverPack.name}`)}>
+                <span>Abrir</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
+                  <path d="M7 17 17 7" /><path d="M7 7h10v10" />
                 </svg>
               </a>
             </div>
@@ -580,26 +583,45 @@ function App() {
       );
     }
 
-    return files.map((file, idx) => (
-      <div className="file-item" key={idx}>
-        <div className="file-info">
-          <div className="file-name">{file.name}</div>
-          {file.size && (
-            <div className="file-size">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    return files.map((file, idx) => {
+      const isWindows7Link = file.name === 'Windows 7';
+
+      return (
+        <div className="file-item" key={idx}>
+          <div className="file-info">
+            <div className="file-name">{file.name}</div>
+            {file.size && (
+              <div className="file-size">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                {file.size}
+              </div>
+            )}
+          </div>
+          <a
+            className={isWindows7Link ? 'btn-link-modal' : 'btn-dl-modal'}
+            href={file.url}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => showToast(isWindows7Link ? `Abriendo enlace: ${file.name}` : `Descarga iniciada: ${file.name}`)}
+          >
+            {isWindows7Link ? (
+              <>
+                <span>Abrir</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M7 17 17 7" /><path d="M7 7h10v10" />
+                </svg>
+              </>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
               </svg>
-              {file.size}
-            </div>
-          )}
+            )}
+          </a>
         </div>
-        <a className="btn-dl-modal" href={file.url} target="_blank" rel="noreferrer" onClick={() => showToast(`Descarga iniciada: ${file.name}`)}>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
-          </svg>
-        </a>
-      </div>
-    ));
+      );
+    });
   };
 
   return (
