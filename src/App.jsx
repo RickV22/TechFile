@@ -249,9 +249,17 @@ function App() {
     if (email) body += `Correo: ${email}\n`;
     body += `\n${msg}`;
 
-    const mailto = `mailto:${to}?subject=${encodeURIComponent('Sugerencia TechFile')}&body=${encodeURIComponent(body)}`;
-    showToast('Abriendo cliente de correo...');
-    window.location.href = mailto;
+    const subject = encodeURIComponent('Sugerencia TechFile');
+    const encodedBody = encodeURIComponent(body);
+    const gmailCompose = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${encodedBody}`;
+    const mailto = `mailto:${to}?subject=${subject}&body=${encodedBody}`;
+    const emailWindow = window.open(gmailCompose, '_blank', 'noopener,noreferrer');
+
+    if (!emailWindow) {
+      window.location.href = mailto;
+    }
+
+    showToast('Se abrió Gmail para enviar la sugerencia');
     setContactModalOpen(false);
   };
 
@@ -845,7 +853,7 @@ function App() {
               <input name="suggestEmail" type="email" placeholder="Tu correo (opcional)" style={{ width: "100%", padding: 10, marginBottom: 10, background: "var(--bg-card2)", border: "1px solid var(--border)", color: "var(--text)", borderRadius: 8 }} />
               <textarea name="suggestMsg" required placeholder="Escribe tu sugerencia..." style={{ width: "100%", minHeight: 120, padding: 10, background: "var(--bg-card2)", border: "1px solid var(--border)", color: "var(--text)", borderRadius: 8 }}></textarea>
               <div style={{ display: "flex", gap: 10, marginTop: 12 }}>
-                <button type="submit" className="btn-dl">Enviar sugerencia</button>
+                <button type="submit" className="btn-dl">Abrir correo y enviar</button>
                 <button type="button" onClick={() => setContactModalOpen(false)} className="btn-dl" style={{ background: "var(--bg-card2)", border: "1px solid var(--border)", color: "var(--text-sub)" }}>Cancelar</button>
               </div>
             </form>
